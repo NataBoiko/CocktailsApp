@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QNV-5r-ylt">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Drinks-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CocktailsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9x0-rz-h9y">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="120" id="gfh-aE-unw" customClass="CocktailCell" customModule="CocktailsApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="120"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gfh-aE-unw" id="IG7-ph-pkj">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YOX-PZ-DuT">
+                                                    <rect key="frame" x="20" y="10" width="100" height="100"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="ZQP-CI-XE8"/>
+                                                        <constraint firstAttribute="width" secondItem="YOX-PZ-DuT" secondAttribute="height" multiplier="1:1" id="ZSE-9R-366"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qTE-Su-D2D">
+                                                    <rect key="frame" x="140" y="50" width="234" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="YOX-PZ-DuT" firstAttribute="leading" secondItem="IG7-ph-pkj" secondAttribute="leading" constant="20" id="CZh-ye-nIb"/>
+                                                <constraint firstItem="qTE-Su-D2D" firstAttribute="leading" secondItem="YOX-PZ-DuT" secondAttribute="trailing" constant="20" id="URQ-Ih-zrW"/>
+                                                <constraint firstItem="YOX-PZ-DuT" firstAttribute="centerY" secondItem="IG7-ph-pkj" secondAttribute="centerY" id="Z0c-5q-dGX"/>
+                                                <constraint firstItem="qTE-Su-D2D" firstAttribute="centerY" secondItem="IG7-ph-pkj" secondAttribute="centerY" id="mO5-1Q-yY7"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="qTE-Su-D2D" secondAttribute="trailing" constant="20" id="qcX-H5-fq1"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cocktailImage" destination="YOX-PZ-DuT" id="sHX-kG-bbr"/>
+                                            <outlet property="cocktailName" destination="qTE-Su-D2D" id="pnV-oh-CkG"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9x0-rz-h9y" secondAttribute="bottom" id="SpO-08-i59"/>
+                            <constraint firstItem="9x0-rz-h9y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="TuH-47-bsj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9x0-rz-h9y" secondAttribute="trailing" id="hAV-Ra-Sea"/>
+                            <constraint firstItem="9x0-rz-h9y" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="nNU-td-gV2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Drinks" id="Lpy-R1-GEV"/>
+                    <connections>
+                        <outlet property="tableView" destination="9x0-rz-h9y" id="8Za-Zd-crk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="97.767857142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qiL-ku-q5N">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QNV-5r-ylt" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZGb-6D-rbM">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Jd6-WV-q63"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="em4-SH-AlE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="97.767857142857139"/>
+        </scene>
+        <!--Filters View Controller-->
+        <scene sceneID="drW-dN-Ltb">
+            <objects>
+                <viewController storyboardIdentifier="FiltersViewController" id="atM-VX-QI4" customClass="FiltersViewController" customModule="CocktailsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5Nt-d4-CNW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="W5W-t4-n7M">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FilterCell" rowHeight="60" id="3DE-6C-4j1" customClass="CategoryCell" customModule="CocktailsApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3DE-6C-4j1" id="otc-3V-7u6">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="INK-Yb-NgK">
+                                                    <rect key="frame" x="35" y="19.5" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="INK-Yb-NgK" firstAttribute="centerY" secondItem="otc-3V-7u6" secondAttribute="centerY" id="5XD-Hm-rMr"/>
+                                                <constraint firstAttribute="trailingMargin" relation="lessThanOrEqual" secondItem="INK-Yb-NgK" secondAttribute="trailing" constant="317" id="fJq-xD-kSQ"/>
+                                                <constraint firstItem="INK-Yb-NgK" firstAttribute="leading" secondItem="otc-3V-7u6" secondAttribute="leading" constant="35" id="jzT-3x-2ai"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="categoryName" destination="INK-Yb-NgK" id="H8e-zw-7Xo"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="W5W-t4-n7M" firstAttribute="top" secondItem="Kh3-f1-NPn" secondAttribute="top" id="QEk-q4-Qz9"/>
+                            <constraint firstItem="Kh3-f1-NPn" firstAttribute="bottom" secondItem="W5W-t4-n7M" secondAttribute="bottom" id="V8o-KD-PB7"/>
+                            <constraint firstItem="Kh3-f1-NPn" firstAttribute="trailing" secondItem="W5W-t4-n7M" secondAttribute="trailing" id="gZF-hC-20b"/>
+                            <constraint firstItem="W5W-t4-n7M" firstAttribute="leading" secondItem="Kh3-f1-NPn" secondAttribute="leading" id="y8D-lK-sTo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Kh3-f1-NPn"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="W5W-t4-n7M" id="c4s-PN-vX1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NOb-rg-BSD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1871.0144927536232" y="97.767857142857139"/>
+        </scene>
+    </scenes>
+</document>
